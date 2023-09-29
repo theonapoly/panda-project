@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+}
+
+@font-face {
+    font-family: "caviar";
+    src: url("assets/fonts/CaviarDreams.ttf");
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-footer {
+    font-family: 'caviar', sans-serif;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.icons-netwoks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.icon {
+    height: clamp(2rem, 10vw, 8rem);
+    width: clamp(2rem, 10vw, 8rem);
+    margin-inline: 3vw;
+    margin-top: clamp(2rem, 10%, 4rem);
+}
+
+.footer-img img {
+    width: 100vw;
+    height: auto;
+    margin-top: clamp(3rem, 10vw, 100rem);
+}
+
+@media screen and (min-width: 1056px) {
+    .title-footer {
+        font-size: 2.5rem
+    }
+}
