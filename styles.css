@@ -1,0 +1,31 @@
+/*------- RESET ------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* COLORS */
+:root {
+  --primary-color: #09090c;
+  --secondary-color: #e74c3c;
+  --font-primary: #333;
+  --font-secondary: #f5f5f5;
+}
+
+/* FONT-FAMILY */
+@font-face {
+  font-family: "edosz";
+  src: url("/assets/fonts/edosz.ttf");
+  font-family: "caviar";
+  src: url("/assets/fonts/CaviarDreams.ttf");
+  font-family: "osake";
+  src: url("/assets/fonts/Osake.ttf");
+}
+
+/* test */
+h1 {
+  font-family: "edosz", sans-serif;
+  color: var(--secondary-color);
+}
