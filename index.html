@@ -11,11 +11,11 @@
       <!-- NAVBAR -->
       <nav class="navbar">
         <div class="navbar-logo"></div>
-        <ul class="navbar-link">
-          <li><a href="">Histoire</a></li>
-          <li><a href="">Photos</a></li>
-          <li><a href="">Menaces</a></li>
-          <li><a href="">S'engager</a></li>
+        <ul class="navbar-list">
+          <li id="history">Histoire</li>
+          <li id="pics">Photos</li>
+          <li id="warn">Menaces</li>
+          <li id="act">S'engager</li>
         </ul>
       </nav>
 
@@ -23,6 +23,7 @@
       <div class="hero-img">
         <div class="hero-title">
           <h1>Panda</h1>
+          <img src="" alt="" />
         </div>
       </div>
     </header>
@@ -32,7 +33,10 @@
       <article class="article article-white">
         <!-- SECTION 1 -->
         <section class="section section-white section-1">
-          <h1>Un emblème</h1>
+          <div>
+            <h2>Emblème</h2>
+            <img src="" alt="" />
+          </div>
           <p>
             Le panda géant (Ailuropoda melanoleuca) occupe une place spéciale
             dans le cœur des Chinois. Il est devenu un symbole de fierté
@@ -47,7 +51,7 @@
             de son potentiel pour attirer l'attention sur les questions
             environnementales.
           </p>
-          <button id="btn"></button>
+          <button class="btn">+</button>
         </section>
 
         <!-- ICONS INFOS -->
@@ -80,8 +84,10 @@
 
         <!-- SECTION 2 -->
         <section class="section section-white section-2">
-          <h1>Habitat</h1>
-          <img src="" alt="" />
+          <div>
+            <h2>Habitat</h2>
+            <img src="" alt="" />
+          </div>
           <p>
             Les pandas géants vivent dans les grandes forêts humides de bambou
             et relativement sur les pentes des montagnes élevés - environ 1 200
@@ -97,7 +103,7 @@
             détails sur la façon à la quelle l'habitat des pandas géants
             réduisent à des parcelles isolées.
           </p>
-          <button id="btn"></button>
+          <button class="btn">+</button>
         </section>
 
         <!-- TEXTE STRONG 1 WHITE-->
@@ -107,12 +113,15 @@
 
         <!-- ILLUSTRATION 1 WHITE "Le saviez-vous ?" -->
         <div class="anim-img anim-1">
-          <img src="" alt="" srcset="" />
+          <img src="" alt="" />
         </div>
 
         <!-- SECTION 3 -->
         <section class="section section-white section-3">
-          <h1>Alimentation</h1>
+          <div>
+            <h2>Alimentation</h2>
+            <img src="" alt="" />
+          </div>
           <p>
             99% de la nourriture des pandas géants provient des tiges tendres et
             des feuilles de bambou. Parce que le bambou est faible en matière de
@@ -124,35 +133,15 @@
             sauvages, les insectes, même les petits animaux s’ils peuvent les
             attraper.
           </p>
-          <button id="btn"></button>
+          <button class="btn">+</button>
         </section>
       </article>
 
       <!-- CARROUSEL -->
-      <div class="main-carrousel">
-        <figure class="item item-1">
+      <div class="carrousel">
+        <figure class="frame">
           <img src="" alt="" />
           <figcaption>Légende image 1</figcaption>
-        </figure>
-        <figure class="item item-2">
-          <img src="" alt="" />
-          <figcaption>Légende image 2</figcaption>
-        </figure>
-        <figure class="item item-3">
-          <img src="" alt="" />
-          <figcaption>Légende image 3</figcaption>
-        </figure>
-        <figure class="item item-4">
-          <img src="" alt="" />
-          <figcaption>Légende image 4</figcaption>
-        </figure>
-        <figure class="item item-5">
-          <img src="" alt="" />
-          <figcaption>Légende image 5</figcaption>
-        </figure>
-        <figure class="item item-6">
-          <img src="" alt="" />
-          <figcaption>Légende image 6</figcaption>
         </figure>
       </div>
 
@@ -160,7 +149,10 @@
       <article class="article article-white">
         <!-- SECTION 4 -->
         <section class="section section-black section-4">
-          <h1>Espèces menacée</h1>
+          <div>
+            <h2>Espèce menacée</h2>
+            <img src="" alt="" />
+          </div>
           <p>
             Depuis une dizaine d’années, les effectifs du panda géant augmentent
             très légèrement. Pourtant, il demeure l’une des espèces les plus
@@ -169,17 +161,20 @@
             de divers projets d’aménagement qui morcellent chaque jour un peu
             plus les parcelles de forêts de bambous restantes…
           </p>
-          <button id="btn"></button>
+          <button class="btn"></button>
         </section>
 
         <!-- ILLUSTRATION 2 BLACK "Le saviez-vous ?" -->
         <div class="anim-img anim-2">
-          <img src="" alt="" srcset="" />
+          <img src="" alt="" />
         </div>
 
         <!-- SECTION 5 -->
         <section class="section section-black section-5">
-          <h1></h1>
+          <div>
+            <h2>Conséquences humaines</h2>
+            <img src="" alt="" />
+          </div>
           <p>
             Depuis les années 1950, l’explosion de la démographie humaine génère
             une déforestation croissante liée au développement des activités
@@ -189,7 +184,7 @@
             chauffage. Résultat : l’aire de répartition du panda se réduit comme
             peau de chagrin.
           </p>
-          <br />
+          <!-- br -->
           <p>
             De nos jours, seuls 1 864 pandas géants subsistent à l'état sauvage,
             dans six grands massifs montagneux du centre de la Chine, les monts
@@ -197,17 +192,20 @@
             dans les provinces du Gansu et du Sichuan et les monts Qionglai,
             Daxiangling, Xiaoxiangling et Liangshan dans la province du Sichuan.
           </p>
-          <button id="btn"></button>
+          <button class="btn"></button>
         </section>
 
         <!-- ILLUSTRATION 3 BLACK "Le saviez-vous ?" -->
         <div class="anim-img anim-3">
-          <img src="" alt="" srcset="" />
+          <img src="" alt="" />
         </div>
 
         <!-- SECTION 6 -->
         <section class="section section-black section-6">
-          <h1>Défis de la migration</h1>
+          <div>
+            <h2>Défis de la migration</h2>
+            <img src="" alt="" />
+          </div>
           <p>
             En raison de la disparition et de la fragmentation de leur habitat,
             les pandas géants ont de plus en plus de difficulté à migrer,
@@ -219,7 +217,7 @@
             d’épisodes de dépérissement massif des forêts de bambou arrivées à
             maturité, nourriture quasi exclusive du plantigrade chinois.
           </p>
-          <button id="btn"></button>
+          <button class="btn"></button>
         </section>
       </article>
 
@@ -241,27 +239,29 @@
       <!-- CARD ENUMERATEUR DE DONATEURS  -->
       <div class="card-donors">
         <h1>Donateurs</h1>
-        <p>1864</p>
+        <p>2567</p>
       </div>
 
       <!-- CARDS ASSOCIATIONS PROTECTION ANIMAL -->
-      <div class="card-association card-wwf">
+      <div class="card-asso card-wwf">
         <img src="" alt="" />
       </div>
-      <div class="card-association card-beauval">
+      <div class="card-asso card-beauval">
         <img src="" alt="" />
       </div>
-      <div class="card-association card-lpo">
+      <div class="card-asso card-lpo">
         <img src="" alt="" />
       </div>
-      <div class="card-association card-ifaw">
+      <div class="card-asso card-ifaw">
         <img src="" alt="" />
       </div>
     </main>
     <!-- FOOTER -->
     <footer>
       <!-- TITRE FOOTER -->
-      <div class="title-footer"></div>
+      <div class="title-footer">
+        <h3>Nous suivre / Nous contacter</h3>
+      </div>
 
       <!-- ICONS RESEAUX SOCIAUX -->
       <div class="icons-networks">
@@ -274,6 +274,7 @@
       <!-- ILLUSTRATION FOOTER -->
       <div class="footer-img">
         <img src="" alt="" />
+        <p></p>
       </div>
     </footer>
     <script src="./index.js"></script>
