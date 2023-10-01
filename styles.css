@@ -134,7 +134,8 @@ html {
 }
 .anim-img img {
   object-fit: contain;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 /* SECTION BLACK */
@@ -168,6 +169,77 @@ html {
   width: 100%;
   object-fit: contain;
 }
+
+/* ANIMATION DONATEURS CSS ------ FUST FOR FUN */
+.circle {
+  height: 250px;
+  width: 250px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  box-shadow: 5px 2px 20px rgb(34, 31, 31);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.circle-multiple div p {
+  font-family: bambou;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.circle-multiple {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.circle-multiple .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.circle-multiple .circle:nth-child(1) {
+  animation: psycho 3s linear infinite;
+  border: 3px solid white;
+}
+
+.circle-multiple .circle:nth-child(2) {
+  animation: psycho 3s linear 0.1s infinite;
+  border: 6px solid rgb(63, 57, 57);
+}
+
+.circle-multiple .circle:nth-child(3) {
+  animation: psycho 3s linear 0.25s infinite;
+  border: 3px solid rgb(22, 21, 21);
+}
+
+@keyframes rotateThis {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes psycho {
+  0% {
+    transform: rotate(0deg) scale(1) translate(0, 0);
+  }
+  33% {
+    transform: rotate(360deg) scale(1) translate(5px, 5px);
+  }
+  66% {
+    transform: rotate(720deg) scale(1) translate(-8px, -5px);
+  }
+  100% {
+    transform: rotate(1080deg) scale(1) translate(0, 0);
+  }
+}
+
 /* --------------------------------------- FOOTER --------------------------------------- */
 footer {
   display: flex;
