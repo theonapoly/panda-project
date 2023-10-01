@@ -24,6 +24,8 @@
   src: url("/assets/fonts/Osake.ttf");
   font-family: "deriku";
   src: url("/assets/fonts/Dekiru.ttf");
+  font-family: "bambou";
+  src: url("/assets/fonts/123Bambou.ttf");
 }
 
 /* --------------------------------------- GENERAL --------------------------------------- */
@@ -33,6 +35,7 @@ html {
 
 /* --------------------------------------- ARTICLES --------------------------------------- */
 
+/* Titres et paragraphes */
 .section {
   display: flex;
   flex-direction: column;
@@ -43,7 +46,7 @@ html {
 }
 
 .section p {
-  font-family: deriku, sans-serif;
+  font-family: bambou, sans-serif;
 }
 
 .section div {
@@ -74,12 +77,58 @@ html {
   align-items: center;
   justify-content: center;
   font-size: 2rem;
+  font-family: bambou, sans-serif;
   color: cornflowerblue;
   border: 1px solid cornflowerblue;
   border-radius: 30px;
   width: 2rem;
 }
 
+/* Icones point info */
+.icons-infos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+  margin: 10vw;
+  height: auto;
+}
+.icons-infos div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  text-align: center;
+  font-family: bambou, sans-serif;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.icons-infos div img {
+  width: 100%;
+  width: 12vw;
+  object-fit: contain;
+}
+
+.icons-infos p {
+  font-size: clamp(0.8rem, 4vw, 1.8rem);
+  font-weight: bold;
+}
+
+/* Text strong */
+.strong-text-white {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15vw;
+  text-align: center;
+  font-family: edosz, sans-serif;
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+/* SECTION BLACK */
+.section-5 p:first-of-type {
+  margin-bottom: 2vh;
+}
 /* --------------------------------------- FOOTER --------------------------------------- */
 footer {
   display: flex;
