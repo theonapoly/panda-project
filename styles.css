@@ -125,9 +125,48 @@ html {
   line-height: 3rem;
 }
 
+/* Illustration dessin panda */
+.anim-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10vw 12vw 10vw 10vw;
+}
+.anim-img img {
+  object-fit: contain;
+  width: 100%;
+}
+
 /* SECTION BLACK */
 .section-5 p:first-of-type {
   margin-bottom: 2vh;
+}
+
+.strong-text-black {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10vw;
+  text-align: center;
+  font-family: edosz, sans-serif;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+/* ASSOCIATIONS - DONATIONS */
+.title-asso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10vh 0;
+}
+
+.title-asso h2 {
+  font-family: bambou, sans-serif;
+  text-transform: uppercase;
+}
+.title-asso img {
+  width: 100%;
+  object-fit: contain;
 }
 /* --------------------------------------- FOOTER --------------------------------------- */
 footer {
