@@ -73,15 +73,14 @@ html {
 }
 
 .read-more-btn {
+  width: 2rem;
+  margin: 2vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
   font-family: bambou, sans-serif;
-  color: cornflowerblue;
-  border: 1px solid cornflowerblue;
-  border-radius: 30px;
-  width: 2rem;
 }
 
 /* Icones point info */
@@ -153,6 +152,18 @@ html {
   line-height: 2rem;
 }
 
+/* CARROUSEL PHOTOS */
+.carrousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carrousel figure img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
 /* ASSOCIATIONS - DONATIONS */
 .title-asso {
   display: flex;
@@ -176,7 +187,7 @@ html {
   width: 250px;
   border: 2px solid var(--primary-color);
   border-radius: 50%;
-  box-shadow: 5px 2px 20px rgb(34, 31, 31);
+  /* box-shadow: 5px 2px 20px rgb(34, 31, 31); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,7 +203,7 @@ html {
   height: 200px;
   width: 200px;
   position: relative;
-  margin: 0 auto;
+  margin: 20vw;
 }
 
 .circle-multiple .circle {
@@ -203,12 +214,12 @@ html {
 
 .circle-multiple .circle:nth-child(1) {
   animation: psycho 3s linear infinite;
-  border: 3px solid white;
+  border: 6px solid white;
 }
 
 .circle-multiple .circle:nth-child(2) {
   animation: psycho 3s linear 0.1s infinite;
-  border: 6px solid rgb(63, 57, 57);
+  border: 2px solid rgb(32, 29, 29);
 }
 
 .circle-multiple .circle:nth-child(3) {
@@ -276,7 +287,7 @@ footer {
   margin-top: clamp(3rem, 10vw, 100rem);
 }
 
-/* --------------------------------------- MEDIA QUERIES --------------------------------------- */
+/* --------------------------------------- MEDIA QUERIES DESKTOP --------------------------------------- */
 @media screen and (min-width: 1056px) {
   .title-footer {
     font-size: 2.5rem;
