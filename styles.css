@@ -154,14 +154,49 @@ html {
 
 /* CARROUSEL PHOTOS */
 .carrousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 400px;
+  height: 400px;
+  background-color: #09090c;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  display: inline-block;
 }
-.carrousel figure img {
-  width: 100%;
-  height: 40vh;
-  object-fit: cover;
+
+.container-carrousel {
+  width: 400px;
+  height: 400px;
+}
+.photo {
+  width: 400px;
+  height: 400px;
+  margin: 0;
+  display: inline-block;
+  background-size: cover;
+}
+
+.btn-carrousel {
+  position: absolute;
+  width: 60px;
+  cursor: pointer;
+  top: 50%;
+  background-color: rgba(256, 256, 256, 0.4);
+  border: 2px solid white;
+  border-radius: 100%;
+}
+
+#btn-left {
+  left: 0.8rem;
+}
+#btn-left:hover {
+  transform: scale(1.2);
+}
+
+#btn-right {
+  right: 0.8rem;
+}
+#btn-right:hover {
+  transform: scale(1.2);
 }
 
 /* ASSOCIATIONS - DONATIONS */
