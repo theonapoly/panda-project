@@ -22,11 +22,233 @@
   src: url("/assets/fonts/CaviarDreams.ttf");
   font-family: "osake";
   src: url("/assets/fonts/Osake.ttf");
+  font-family: "deriku";
+  src: url("/assets/fonts/Dekiru.ttf");
+  font-family: "bambou";
+  src: url("/assets/fonts/123Bambou.ttf");
 }
 
 /* --------------------------------------- GENERAL --------------------------------------- */
 html {
   background-color: var(--secondary-color);
+}
+
+/* --------------------------------------- ARTICLES --------------------------------------- */
+
+/* Titres et paragraphes */
+.section {
+  display: flex;
+  flex-direction: column;
+  margin: 10vw;
+  line-height: 2rem;
+  text-align: justify;
+  align-items: center;
+}
+
+.section p {
+  font-family: bambou, sans-serif;
+}
+
+.section div {
+  font-family: edosz, sans-serif;
+  font-size: 1.6rem;
+  width: 100%;
+  display: flex;
+  margin: 4vh;
+}
+
+.section div img {
+  width: 100%;
+  height: 2.5rem;
+  object-fit: contain;
+}
+
+/* Bouton "voir plus" */
+.read-more-text {
+  display: none;
+}
+
+.read-more-text--show {
+  display: inline;
+}
+
+.read-more-btn {
+  width: 2rem;
+  margin: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: bambou, sans-serif;
+}
+
+/* Icones point info */
+.icons-infos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+  margin: 10vw;
+  height: auto;
+}
+.icons-infos div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  text-align: center;
+  font-family: bambou, sans-serif;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.icons-infos div img {
+  width: 100%;
+  width: 12vw;
+  object-fit: contain;
+}
+
+.icons-infos p {
+  font-size: clamp(0.8rem, 4vw, 1.8rem);
+  font-weight: bold;
+}
+
+/* Text strong */
+.strong-text-white {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15vw;
+  text-align: center;
+  font-family: edosz, sans-serif;
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+/* Illustration dessin panda */
+.anim-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10vw 12vw 10vw 10vw;
+}
+.anim-img img {
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+}
+
+/* SECTION BLACK */
+.section-5 p:first-of-type {
+  margin-bottom: 2vh;
+}
+
+.strong-text-black {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10vw;
+  text-align: center;
+  font-family: edosz, sans-serif;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+/* CARROUSEL PHOTOS */
+.carrousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carrousel figure img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+/* ASSOCIATIONS - DONATIONS */
+.title-asso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10vh 0;
+}
+
+.title-asso h2 {
+  font-family: bambou, sans-serif;
+  text-transform: uppercase;
+}
+.title-asso img {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* ANIMATION DONATEURS CSS ------ FUST FOR FUN */
+.circle {
+  height: 250px;
+  width: 250px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  /* box-shadow: 5px 2px 20px rgb(34, 31, 31); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.circle-multiple div p {
+  font-family: bambou;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.circle-multiple {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin: 20vw;
+}
+
+.circle-multiple .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.circle-multiple .circle:nth-child(1) {
+  animation: psycho 3s linear infinite;
+  border: 6px solid white;
+}
+
+.circle-multiple .circle:nth-child(2) {
+  animation: psycho 3s linear 0.1s infinite;
+  border: 2px solid rgb(32, 29, 29);
+}
+
+.circle-multiple .circle:nth-child(3) {
+  animation: psycho 3s linear 0.25s infinite;
+  border: 3px solid rgb(22, 21, 21);
+}
+
+@keyframes rotateThis {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes psycho {
+  0% {
+    transform: rotate(0deg) scale(1) translate(0, 0);
+  }
+  33% {
+    transform: rotate(360deg) scale(1) translate(5px, 5px);
+  }
+  66% {
+    transform: rotate(720deg) scale(1) translate(-8px, -5px);
+  }
+  100% {
+    transform: rotate(1080deg) scale(1) translate(0, 0);
+  }
 }
 
 /* --------------------------------------- FOOTER --------------------------------------- */
@@ -65,7 +287,7 @@ footer {
   margin-top: clamp(3rem, 10vw, 100rem);
 }
 
-/* --------------------------------------- MEDIA QUERIES --------------------------------------- */
+/* --------------------------------------- MEDIA QUERIES DESKTOP --------------------------------------- */
 @media screen and (min-width: 1056px) {
   .title-footer {
     font-size: 2.5rem;
