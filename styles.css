@@ -73,10 +73,9 @@ body {
   align-items: center;
   justify-content: center;
 }
-.hero-title h1 {
-  display: block;
-  font-size: 102px;
+.hero-title h1 spam {
   color: var(--font-secondary);
+  font-size: clamp(3rem, 15vw, 15rem);
 }
 
 .patte-illu {
@@ -442,13 +441,16 @@ footer {
     justify-content: space-around;
     align-items: center;
   }
+  .navbar-list li {
+    font-size: 2rem;
+  }
   .navbar-list li:hover {
     transform: scale(1.1);
   }
 
   .hero-img {
     background-image: url(/assets/photos/hero-desktop.png);
-    background-position: center;
+    background-position: 0%;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
