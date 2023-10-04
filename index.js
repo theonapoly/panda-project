@@ -28,7 +28,7 @@ const createLettre = () => {
 };
 
 setInterval(() => {
-  if (pandaIndex < ) {
+  if (pandaIndex < 5) {
     createLettre();
     pandaIndex++;
   }
