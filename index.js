@@ -55,40 +55,44 @@ const listPandaFact = [
     "Les pandas ont un camouflage efficace malgré leur couleur particulière en noir et blanc.",
     "Il existe deux sous-espèces distinctes de panda géant : le panda géant de Sichuan et le panda géant de Qinling.",
 ];
+const imgFact1 = document.getElementById("anim-1");
+const imgFact2 = document.getElementById("anim-2");
+const imgFact3 = document.getElementById("anim-3");
 
-const imgFact = document.getElementById ("anim-1")
-const idFact = document.getElementById ("display-fact")
+function eachFact (item) {
 
-function addText (item) {
+  function addText (array) {
     const display = document.createElement("p")
     display.className = "fact"
-    imgFact.appendChild(display)
-    display.appendChild(document.createTextNode(`Le saviez-vous ? ${item}`))
-}
+    item.appendChild(display)
+    display.appendChild(document.createTextNode(`Le saviez-vous ? ${array}`))
+  }
 
-function rmText() {
-    const display = imgFact.querySelector("p");
+  function rmText() {
+    const display = item.querySelector("p");
     if (display) {
         display.remove();
     }
-}
+  }
 
 
-function rdmString (list) {
+  function rdmString (list) {
     const randomIndex = Math.floor(Math.random()*list.length);
     return list[randomIndex]
-}
+  }
 
-function clickDisplay() {
-    const display = imgFact.querySelector("p");
+  function clickDisplay() {
+    const display = item.querySelector("p");
     if (!display) {
-        addText(rdmString(listPandaFact));
+        addText (rdmString(listPandaFact));
     } else {
         rmText();
     }
+  }
+
+  item.addEventListener("click", clickDisplay);
 }
 
-imgFact.addEventListener("click", clickDisplay);
-
-
-
+eachFact (imgFact1)
+eachFact (imgFact2)
+eachFact (imgFact3)

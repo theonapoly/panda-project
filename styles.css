@@ -390,6 +390,32 @@ body {
   transform: scale(1);
 }
 
+#anim-2 {
+  position: relative;
+}
+
+#anim-2 img:hover {
+  transform: scale(1.1);
+}
+
+#anim-2 img:active {
+  transform: scale(1);
+}
+
+#anim-3 {
+  position: relative;
+}
+
+#anim-3 img:hover {
+  transform: scale(1.1);
+}
+
+#anim-3 img:active {
+  transform: scale(1);
+}
+
+
+
 .fact {
   color: #ffffff;
   width: clamp(300px, 40vw , 600px);
