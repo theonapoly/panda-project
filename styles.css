@@ -17,15 +17,15 @@
 /* Fonts */
 @font-face {
   font-family: "edosz";
-  src: url("/assets/fonts/edosz.ttf");
+  src: url("./assets/fonts/edosz.ttf");
   font-family: "caviar";
-  src: url("/assets/fonts/CaviarDreams.ttf");
+  src: url("./assets/fonts/CaviarDreams.ttf");
   font-family: "osake";
-  src: url("/assets/fonts/Osake.ttf");
+  src: url("./assets/fonts/Osake.ttf");
   font-family: "deriku";
-  src: url("/assets/fonts/Dekiru.ttf");
+  src: url("./assets/fonts/Dekiru.ttf");
   font-family: "bambou";
-  src: url("/assets/fonts/123Bambou.ttf");
+  src: url("./assets/fonts/123Bambou.ttf");
 }
 
 /* --------------------------------------- GENERAL --------------------------------------- */
@@ -63,7 +63,7 @@ body {
 }
 
 .hero-img {
-  background-image: url(/assets/photos/hero-mobile.png);
+  background-image: url(./assets/photos/hero-mobile.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -146,7 +146,7 @@ body {
 }
 
 .hero-img {
-  background-image: url(/assets/photos/hero-mobile.png);
+  background-image: url(./assets/photos/hero-mobile.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -377,6 +377,59 @@ body {
     transform: rotate(1080deg) scale(1) translate(0, 0);
   }
 }
+/* --------------------------------------- CLIC PANDA --------------------------------------- */
+#anim-1 {
+  position: relative;
+}
+
+#anim-1 img:hover {
+  transform: scale(1.1);
+}
+
+#anim-1 img:active {
+  transform: scale(1);
+}
+
+#anim-2 {
+  position: relative;
+}
+
+#anim-2 img:hover {
+  transform: scale(1.1);
+}
+
+#anim-2 img:active {
+  transform: scale(1);
+}
+
+#anim-3 {
+  position: relative;
+}
+
+#anim-3 img:hover {
+  transform: scale(1.1);
+}
+
+#anim-3 img:active {
+  transform: scale(1);
+}
+
+
+
+.fact {
+  color: #ffffff;
+  width: clamp(300px, 40vw , 600px);
+  height: auto;
+  top: -10vh;
+  text-align: center;
+  display: flex;
+  position:absolute;
+  font-family: bambou;
+  border: 3px solid black;
+  border-radius: 50%;
+  padding: 3rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  }
 
 /* --------------------------------------- FOOTER --------------------------------------- */
 footer {
@@ -447,7 +500,7 @@ footer {
   }
 
   .hero-img {
-    background-image: url(/assets/photos/hero-desktop.png);
+    background-image: url(./assets/photos/hero-desktop.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
