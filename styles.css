@@ -29,10 +29,137 @@
 }
 
 /* --------------------------------------- GENERAL --------------------------------------- */
-html {
+body {
   background-color: var(--secondary-color);
 }
+/* -----------------------header-------------------- */
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 64px;
+}
+.navbar-button {
+  width: 100%;
+  height: 100%;
+}
+.navbar-button img {
+  width: 100%;
+  height: 64px;
+}
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+.navbar-logo img {
+  width: 100%;
+  height: 64px;
+  margin: 0 10%;
+}
+.navbar-list {
+  width: 0;
+  list-style: none;
+  visibility: hidden;
+  z-index: -1;
+}
 
+.hero-img {
+  background-image: url(/assets/photos/hero-mobile.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-title h1 {
+  display: block;
+  font-size: 102px;
+  color: var(--font-secondary);
+}
+
+.patte-illu {
+  width: 5%;
+  position: absolute;
+  animation: pastaWorks 100s infinite linear;
+}
+.patte-illu img {
+  width: 50%;
+}
+.patte-left {
+  display: flex;
+  justify-content: left;
+}
+.patte-right {
+  display: flex;
+  justify-content: right;
+}
+@keyframes pastaWorks {
+  0% {
+    top: 440px;
+    left: 2%;
+    transform: rotate(90deg);
+  }
+
+  10% {
+    top: 480px;
+    left: 95%;
+    transform: rotate(90deg);
+  }
+  11% {
+    top: 480px;
+    left: 95%;
+    transform: rotate(180deg);
+  }
+
+  15% {
+    top: 750px;
+    left: 95%;
+    transform: rotate(180deg);
+  }
+  25% {
+    top: 850px;
+    left: 3%;
+    transform: rotate(270deg);
+  }
+  30% {
+    top: 1400px;
+    left: 3%;
+    transform: rotate(180deg);
+  }
+  40% {
+    top: 1400px;
+    left: 95%;
+    transform: rotate(90deg);
+  }
+  45% {
+    top: 1700px;
+    left: 95%;
+    transform: rotate(180deg);
+  }
+  100% {
+    top: 2000px;
+    left: 95%;
+    transform: rotate(180deg);
+  }
+}
+
+.hero-img {
+  background-image: url(/assets/photos/hero-mobile.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-title h1 {
+  font-size: 102px;
+  color: var(--font-secondary);
+}
 /* --------------------------------------- ARTICLES --------------------------------------- */
 
 /* Titres et paragraphes */
@@ -250,114 +377,7 @@ html {
     transform: rotate(1080deg) scale(1) translate(0, 0);
   }
 }
-/* -----------------------header-------------------- */
-.navbar {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-}
-.navbar-button {
-  width: 100%;
-  height: 100%;
-}
-.navbar-button img {
-  width: 100%;
-}
-.navbar-logo {
-  display: flex;
-  align-items: center;
-}
-.navbar-logo img {
-  width: 100%;
-  height: 64px;
-  margin: 0 10%;
-}
-.navbar-list {
-  width: 0;
-  list-style: none;
-  visibility: hidden;
-  z-index: -1;
-}
 
-.hero-img {
-  background-image: url(/assets/photos/hero-mobile.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero-title h1 {
-  font-size: 102px;
-  color: var(--font-secondary);
-}
-
-.patte-illu {
-  width: 5%;
-  position: absolute;
-  animation: pastaWorks 50s infinite linear;
-}
-.patte-illu img {
-  width: 50%;
-}
-.patte-left {
-  display: flex;
-  justify-content: left;
-}
-.patte-right {
-  display: flex;
-  justify-content: right;
-}
-@keyframes pastaWorks {
-  0% {
-    top: 415px;
-    left: 18%;
-    transform: rotate(80deg);
-  }
-  20% {
-    top: 400px;
-    left: 50%;
-    transform: rotate(90deg);
-  }
-  40% {
-    top: 430px;
-    left: 85%;
-    transform: rotate(100deg);
-  }
-  60% {
-    top: 630px;
-    left: 93%;
-    transform: rotate(170deg);
-  }
-  80% {
-    top: 630px;
-    left: 50%;
-    transform: rotate(260deg);
-  }
-  100% {
-    top: 830px;
-    left: 20%;
-    transform: rotate(220deg);
-  }
-}
-
-.hero-img {
-  background-image: url(/assets/photos/hero-mobile.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero-title h1 {
-  font-size: 102px;
-  color: var(--font-secondary);
-}
 /* --------------------------------------- FOOTER --------------------------------------- */
 footer {
   display: flex;

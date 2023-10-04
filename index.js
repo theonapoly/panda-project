@@ -28,6 +28,8 @@ const createLettre = () => {
 };
 
 setInterval(() => {
-  createLettre();
-  pandaIndex++;
+  if (pandaIndex < ) {
+    createLettre();
+    pandaIndex++;
+  }
 }, 300);
