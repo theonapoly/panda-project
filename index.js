@@ -61,6 +61,7 @@ const idFact = document.getElementById ("display-fact")
 
 function addText (item) {
     const display = document.createElement("p")
+    display.className = "fact"
     imgFact.appendChild(display)
     display.appendChild(document.createTextNode(`Le saviez-vous ? ${item}`))
 }
