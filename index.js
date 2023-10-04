@@ -1,5 +1,54 @@
 // Bouton "voir plus"
 const containers = document.querySelectorAll(".section");
+const patteRight = document.querySelector(".patte-right");
+const patteLeft = document.querySelector(".patte-left");
+const heroPanda = document.querySelector(".hero-panda");
+const navbarMobil = document.querySelector(".navbar-button");
+const navbarVisible = document.querySelector(".navbarMobil");
+const hoosePosition = document.querySelector(".bamboo-leaf");
+const nome = ["PANDA"];
+let pandaIndex = 0;
+
+// --------------nav bare--------------------------
+navbarMobil.addEventListener("click", () => {
+  navbarVisible.style.display = "initial";
+});
+hoosePosition.addEventListener("click", () => {
+  navbarVisible.style.display = "none";
+});
+
+//------------------hero-------------------
+const createLettre = () => {
+  const letter = document.createElement("spam");
+  heroPanda.appendChild(letter);
+  letter.textContent = nome[0][pandaIndex];
+};
+
+setInterval(() => {
+  if (pandaIndex < 5) {
+    createLettre();
+    pandaIndex++;
+  }
+}, 300);
+
+//---------------------------pattAnimation---------------------------
+
+const pattAnimation = (patt) => {
+  const pattImg = document.createElement("img");
+  patt.appendChild(pattImg);
+  pattImg.src = "./assets/icon/patte-illu.png";
+  setTimeout(() => {
+    pattImg.remove();
+  }, 900);
+};
+setInterval(() => {
+  pattAnimation(patteRight);
+}, 2000);
+setTimeout(() => {
+  setInterval(() => {
+    pattAnimation(patteLeft);
+  }, 2000);
+}, 1000);
 
 containers.forEach((parentContainer) => {
   parentContainer.addEventListener("click", (event) => {
@@ -17,22 +66,6 @@ containers.forEach((parentContainer) => {
     current.textContent = current.textContent.includes("+") ? "-" : "+";
   });
 });
-
-const heroPanda = document.querySelector(".hero-panda");
-let nome = ["PANDA"];
-let pandaIndex = 0;
-const createLettre = () => {
-  const letter = document.createElement("spam");
-  heroPanda.appendChild(letter);
-  letter.textContent = nome[0][pandaIndex];
-};
-
-setInterval(() => {
-  if (pandaIndex < 55) {
-    createLettre();
-    pandaIndex++;
-  }
-}, 300);
 
 // Fonction panda cliquable
 const listPandaFact = [
