@@ -17,6 +17,24 @@ containers.forEach((parentContainer) => {
     current.textContent = current.textContent.includes("+") ? "-" : "+";
   });
 });
+
+const heroPanda = document.querySelector(".hero-panda");
+let nome = ["PANDA"];
+let pandaIndex = 0;
+const createLettre = () => {
+  const letter = document.createElement("spam");
+  heroPanda.appendChild(letter);
+  letter.textContent = nome[0][pandaIndex];
+};
+
+setInterval(() => {
+  if (pandaIndex < ) {
+    createLettre();
+    pandaIndex++;
+  }
+}, 300);
+
+// Fonction panda cliquable
 const listPandaFact = [
     "Le panda passe environ 14 heures par jour à manger.",
     "Le poids du bébé panda est environs 900 fois inférieur à celui de son parent.",
