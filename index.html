@@ -6,6 +6,7 @@
     <title>Bio Panda</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
   </head>
 
   <body>
@@ -144,6 +145,17 @@
           <span class="read-more-btn">+</span>
         </section>
 
+        <!-- <div class="main-container">
+          <div class="container">
+            <p class="sentence">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repudiandae aut eos aperiam, suscipit cupiditate porro accusantium
+              labore voluptatem at accusamus odit in nemo libero magni a nobis
+              omnis nesciunt ipsa!
+            </p>
+          </div>
+        </div> -->
+
         <!-- TEXTE STRONG 1 WHITE-->
         <div class="strong-text-white">
           <p>symbole de la protection de la nature</p>
@@ -179,10 +191,19 @@
 
       <!-- CARROUSEL -->
       <div class="carrousel">
-        <figure class="frame">
-          <img src="./assets/photos/img-panda-1.jpg" alt="" />
-          <figcaption>Légende image 1</figcaption>
-        </figure>
+        <div class="container-carrousel"></div>
+        <img
+          src="/assets/img/calligraphie/gauche-blanc.png"
+          alt="btn-left"
+          class="btn-carrousel"
+          id="btn-left"
+        />
+        <img
+          src="/assets/img/calligraphie/droit-blanc.png"
+          alt="btn-right"
+          class="btn-carrousel"
+          id="btn-right"
+        />
       </div>
 
       <!-- ARTICLE 2 BLACK -->
@@ -245,7 +266,7 @@
           </span>
           <span class="read-more-btn">+</span>
         </section>
-
+        <div class="nextanim"></div>
         <!-- ILLUSTRATION 3 BLACK "Le saviez-vous ?" -->
         <div class="anim-img" id="anim-3">
           <img src="./assets/img/img-panda/panda-draw-white.png" alt="panda" />
@@ -333,8 +354,16 @@
 
       <!-- ICONS RESEAUX SOCIAUX -->
       <div class="icons-networks">
-        <img class="icon" src="./assets/icon/twitter-icon.png" alt="Twitter/X" />
-        <img class="icon" src="./assets/icon/facebook-icon.png" alt="Facebook" />
+        <img
+          class="icon"
+          src="./assets/icon/twitter-icon.png"
+          alt="Twitter/X"
+        />
+        <img
+          class="icon"
+          src="./assets/icon/facebook-icon.png"
+          alt="Facebook"
+        />
         <img
           class="icon"
           src="./assets/icon/instagram-icon.png"
