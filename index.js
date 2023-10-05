@@ -132,6 +132,99 @@ eachFact(imgFact1);
 eachFact(imgFact2);
 eachFact(imgFact3);
 
+// Carrousel -----------------------
+document.body.onload = function () {
+  const nbrPics = 7;
+  let position = 0;
+  const container = document.querySelector(".container-carrousel");
+  const btnLeft = document.getElementById("btn-left");
+  const btnRight = document.getElementById("btn-right");
+
+  container.style.width = 100 * nbrPics + "vw";
+  for (let i = 1; i <= nbrPics; i++) {
+    const divPics = document.createElement("div");
+    divPics.className = "photo";
+    divPics.style.backgroundImage = `url('./assets/photos/photo-panda-${i}.jpg')`;
+    container.appendChild(divPics);
+  }
+
+  btnLeft.addEventListener("click", function () {
+    if (position > 0) {
+      position--;
+      container.style.transform = `translateX(-${position * 100}vw)`;
+      container.style.transition = "all 0.5s ease";
+    }
+  });
+
+  btnRight.addEventListener("click", function () {
+    if (position < nbrPics - 1) {
+      position++;
+      container.style.transform = `translateX(-${position * 100}vw)`;
+      container.style.transition = "all 0.5s ease";
+    }
+  });
+};
+
+// MagicScroll -----------------------
+// let controller = new ScrollMagic.Controller();
+
+// let scene = new ScrollMagic.Scene({
+//   triggerElement: ".section-2",
+// })
+
+//   .setClassToggle(".section-2", "show")
+//   .addTo(controller);
+
+// const body = document.getElementsByTagName("body");
+
+// Effet Parallax -----------------------
+const sectionOne = document.querySelector(`.section-1`);
+const sectionTwo = document.querySelector(`.section-2`);
+const sectionThree = document.querySelector(`.section-3`);
+const sectionFour = document.querySelector(`.section-4`);
+const sectionFive = document.querySelector(`.section-5`);
+const sectionSix = document.querySelector(`.section-6`);
+
+function parallax(elemChange) {
+  window.addEventListener("scroll", () => {
+    const topElementToTopViewport = elemChange.getBoundingClientRect().top;
+    const botElementToTopViewport = elemChange.getBoundingClientRect().bottom;
+    const { scrollTop, clientHeight } = document.documentElement;
+    const classShow = document.querySelector(".show");
+
+    console.log(
+      scrollTop >
+        (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1.2 &&
+        scrollTop <
+          (scrollTop + botElementToTopViewport).toFixed() - clientHeight * 0.8
+    );
+    console.log(scrollTop);
+
+    if (
+      scrollTop >
+        (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8 &&
+      scrollTop <
+        (scrollTop + botElementToTopViewport).toFixed() - clientHeight * 0.3
+    ) {
+      elemChange.classList.add("show");
+      elemChange.style.opacity = "1";
+      elemChange.style.transition = "2s";
+    } else {
+      elemChange.style.opacity = "0";
+    }
+  });
+}
+
+parallax(sectionOne);
+parallax(sectionTwo);
+parallax(sectionThree);
+parallax(sectionFour);
+parallax(sectionFive);
+parallax(sectionSix);
+
+// window.addEventListener("click", (event) => {
+//   console.log(event);
+// });
 let active = 3;
 function loadShow() {
   let stt = 0;
@@ -168,3 +261,35 @@ prev.onclick = function () {
   active = active - 1 >= 0 ? active - 1 : active;
   loadShow();
 };
+
+// Fonction couleur BG
+
+const allDocument = document.querySelector(`body`);
+const backgroundChange = document.querySelector(`.article-black`);
+
+window.addEventListener(`scroll`, () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = backgroundChange.getBoundingClientRect().top;
+  const botElementToTopViewport =
+    backgroundChange.getBoundingClientRect().bottom;
+  console.log(scrollTop);
+  if (
+    scrollTop >
+      (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.2 &&
+    scrollTop <
+      (scrollTop + botElementToTopViewport).toFixed() - clientHeight * 0.2
+  ) {
+    allDocument.classList.add("background-transition");
+    const bgTransition = document.querySelector(".background-transition");
+    bgTransition.style.backgroundOpacity = "1";
+    bgTransition.style.backgroundColor = "#09090c";
+    bgTransition.style.transition = "1.5s";
+  } else {
+    allDocument.classList.add("background-transition");
+    const bgTransition = document.querySelector(".background-transition");
+    bgTransition.style.backgroundOpacity = "0";
+    bgTransition.style.backgroundColor = "white";
+    allDocument.classList.remove("background-transition");
+  }
+});
