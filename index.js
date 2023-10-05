@@ -96,3 +96,63 @@ function eachFact (item) {
 eachFact (imgFact1)
 eachFact (imgFact2)
 eachFact (imgFact3)
+
+// Fonction couleur BG
+
+// const sectionOne = document.querySelector(".section-1");
+// const iconsInfos = document.querySelector(".icons-infos");
+
+// let offTop, offBot;
+
+// function parallax(elemChange, elemNext) {
+//   offTop = elemChange.offsetTop - 700;
+//   offBot = elemNext.offsetTop - 0.3 * window.innerHeight;
+
+//   window.addEventListener("scroll", function () {
+//     if (window.scrollY >= offTop && window.scrollY < offBot) {
+//       elemChange.classList.add("show");
+//       const classShow = document.querySelector(".show");
+//       classShow.style.opacity = "1";
+//       classShow.style.transition = "2s";
+//     } else {
+//       elemChange.classList.remove("show");
+//       elemChange.style.opacity = "0";
+//     }
+//     offTop = elemChange.offsetTop - 700;
+//     offBot = elemNext.offsetTop - 0.3 * window.innerHeight;
+//   });
+// }
+
+// parallax(sectionOne, iconsInfos);
+
+
+
+
+
+
+const allDocument = document.querySelector(`body`)
+const backgroundChange = document.querySelector(`.article-black`)
+
+window.addEventListener(`scroll`, () => {
+
+  const {scrollTop, clientHeight} = document.documentElement;
+
+  const topElementToTopViewport = backgroundChange.getBoundingClientRect().top;
+  const botElementToTopViewport = backgroundChange.getBoundingClientRect().bottom;
+
+  if(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.5 && scrollTop < (scrollTop + botElementToTopViewport).toFixed() - clientHeight * 0.2){
+    allDocument.classList.add("background-transition");
+    const bgTransition = document.querySelector(".background-transition");
+    bgTransition.style.backgroundOpacity = "1";
+    bgTransition.style.backgroundColor = "#09090c";
+    bgTransition.style.transition = "1.5s";
+  } else {
+    
+    const bgTransition = document.querySelector(".background-transition");
+    bgTransition.style.backgroundOpacity = "0";
+    bgTransition.style.backgroundColor = "white";
+    allDocument.classList.remove("background-transition");
+    // bgTransition.style.backgroundColor.remove()
+  }
+
+})

@@ -428,8 +428,14 @@ body {
   border: 3px solid black;
   border-radius: 50%;
   padding: 3rem;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
   }
+
+/* --------------------------------------- DARK SECTION --------------------------------------- */
+
+.article-black {
+  color: white
+}
 
 /* --------------------------------------- FOOTER --------------------------------------- */
 footer {
