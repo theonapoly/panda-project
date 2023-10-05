@@ -469,22 +469,20 @@ body {
   transform: scale(1);
 }
 
-
-
 .fact {
   color: #ffffff;
-  width: clamp(300px, 40vw , 600px);
+  width: clamp(300px, 40vw, 600px);
   height: auto;
   top: -10vh;
   text-align: center;
   display: flex;
-  position:absolute;
+  position: absolute;
   font-family: bambou;
   border: 3px solid black;
   border-radius: 50%;
   padding: 3rem;
   background-color: rgba(0, 0, 0, 0.9);
-  }
+}
 
 /* --------------------------------------- FOOTER --------------------------------------- */
 footer {
