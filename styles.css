@@ -96,7 +96,7 @@ a {
 }
 #history {
   margin-top: 50px;
-  background-image: url(/assets/photos/hero-mobile.png);
+  background-image: url(./assets/photos/hero-mobile.png);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
