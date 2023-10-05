@@ -55,6 +55,7 @@ body {
 }
 .navbarMobil {
   display: none;
+  z-index: 10;
   position: fixed;
   width: 100%;
   top: 70px;
@@ -127,9 +128,7 @@ a {
   display: flex;
   justify-content: right;
 }
-.patte-illu div img {
-  position: absolute;
-}
+
 @keyframes pastaWorks {
   0% {
     top: 440px;
@@ -567,4 +566,65 @@ footer {
   .navbar-list li:hover {
     transform: scale(1.1);
   }
+}
+.slider {
+  position: relative;
+  width: 100%;
+  height: 470px;
+  overflow: hidden;
+}
+.item {
+  border: 1px solid var(--primary-color);
+  position: absolute;
+  width: 60%;
+  height: 420px;
+  left: 20%;
+  text-align: justify;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.5s;
+
+  top: 0;
+}
+#next,
+#prev {
+  position: absolute;
+  top: 40%;
+  color: var(--primary-color);
+  z-index: 2;
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+  font-family: monospace;
+  font-weight: bold;
+  left: 10px;
+}
+#next {
+  left: unset;
+  right: 10px;
+}
+.logo-done {
+  display: flex;
+  justify-content: space-between;
+}
+.dons {
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  width: 30%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  padding: 10px;
+}
+.item p {
+  height: 130px;
+}
+.social-networks {
+  height: 30px;
+}
+.social-networks img {
+  width: 40px;
+  height: 40px;
 }
