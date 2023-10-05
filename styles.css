@@ -19,15 +19,15 @@
 /* Fonts */
 @font-face {
   font-family: "edosz";
-  src: url("/assets/fonts/edosz.ttf");
+  src: url("./assets/fonts/edosz.ttf");
   font-family: "caviar";
-  src: url("/assets/fonts/CaviarDreams.ttf");
+  src: url("./assets/fonts/CaviarDreams.ttf");
   font-family: "osake";
-  src: url("/assets/fonts/Osake.ttf");
+  src: url("./assets/fonts/Osake.ttf");
   font-family: "deriku";
-  src: url("/assets/fonts/Dekiru.ttf");
+  src: url("./assets/fonts/Dekiru.ttf");
   font-family: "bambou";
-  src: url("/assets/fonts/123Bambou.ttf");
+  src: url("./assets/fonts/123Bambou.ttf");
 }
 
 /* --------------------------------------- GENERAL --------------------------------------- */
@@ -96,7 +96,7 @@ a {
 #history {
   margin-top: 50px;
   background-image: url(/assets/photos/hero-mobile.png);
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -396,6 +396,124 @@ a {
   100% {
     transform: rotate(1080deg) scale(1) translate(0, 0);
   }
+}
+/* --------------------------------------- CLIC PANDA --------------------------------------- */
+#anim-1 {
+  position: relative;
+}
+
+#anim-1 img:hover {
+  transform: scale(1.1);
+}
+
+#anim-1 img:active {
+  transform: scale(1);
+}
+
+#anim-2 {
+  position: relative;
+}
+
+#anim-2 img:hover {
+  transform: scale(1.1);
+}
+
+#anim-2 img:active {
+  transform: scale(1);
+}
+
+#anim-3 {
+  position: relative;
+}
+
+#anim-3 img:hover {
+  transform: scale(1.1);
+}
+
+#anim-3 img:active {
+  transform: scale(1);
+}
+
+.fact {
+  color: #ffffff;
+  width: clamp(300px, 40vw, 600px);
+  height: auto;
+  top: -10vh;
+  text-align: center;
+  display: flex;
+  position: absolute;
+  font-family: bambou;
+  border: 3px solid black;
+  border-radius: 50%;
+  padding: 3rem;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+/* ------------------------catd--------------  */
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 370px;
+  overflow: hidden;
+}
+.item {
+  border: 2px solid var(--primary-color);
+  position: absolute;
+  width: 60%;
+
+  height: 320px;
+
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.5s;
+  left: calc(50% - 110px);
+  top: 0;
+  left: 20%;
+}
+#next,
+#prev {
+  position: absolute;
+  top: 40%;
+  color: #0c0b0b;
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+  z-index: 2;
+  font-weight: bold;
+  left: 10px;
+}
+#next {
+  left: unset;
+  right: 10px;
+}
+.social-networks {
+  display: flex;
+}
+.social-networks img {
+  width: 10%;
+  height: 10%;
+}
+.logo-done {
+  display: flex;
+  justify-content: space-between;
+}
+p {
+  height: 130px;
+  width: 84%;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+}
+.dons {
+  padding: 5px;
+  border: 1px solid var(--font-primary);
+  width: 50%;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 10px;
+  color: var(--font-primary);
+  align-items: center;
 }
 
 /* --------------------------------------- FOOTER --------------------------------------- */

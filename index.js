@@ -6,6 +6,13 @@ const heroPanda = document.querySelector(".hero-panda");
 const navbarMobil = document.querySelector(".navbar-button");
 const navbarVisible = document.querySelector(".navbarMobil");
 const hoosePosition = document.querySelector(".bamboo-leaf");
+const imgFact1 = document.getElementById("anim-1");
+const imgFact2 = document.getElementById("anim-2");
+const imgFact3 = document.getElementById("anim-3");
+let items = document.querySelectorAll(".slider .item");
+let next = document.getElementById("next");
+let prev = document.getElementById("prev");
+
 const nome = ["PANDA"];
 let pandaIndex = 0;
 
@@ -89,34 +96,75 @@ const listPandaFact = [
   "Il existe deux sous-espèces distinctes de panda géant : le panda géant de Sichuan et le panda géant de Qinling.",
 ];
 
-const imgFact = document.getElementById("anim-1");
-const idFact = document.getElementById("display-fact");
+function eachFact(item) {
+  function addText(array) {
+    const display = document.createElement("p");
+    display.className = "fact";
+    item.appendChild(display);
+    display.appendChild(document.createTextNode(`Le saviez-vous ? ${array}`));
+  }
 
-function addText(item) {
-  const display = document.createElement("p");
-  imgFact.appendChild(display);
-  display.appendChild(document.createTextNode(`Le saviez-vous ? ${item}`));
+  function rmText() {
+    const display = item.querySelector("p");
+    if (display) {
+      display.remove();
+    }
+  }
+
+  function rdmString(list) {
+    const randomIndex = Math.floor(Math.random() * list.length);
+    return list[randomIndex];
+  }
+
+  function clickDisplay() {
+    const display = item.querySelector("p");
+    if (!display) {
+      addText(rdmString(listPandaFact));
+    } else {
+      rmText();
+    }
+  }
+
+  item.addEventListener("click", clickDisplay);
 }
 
-function rmText() {
-  const display = imgFact.querySelector("p");
-  if (display) {
-    display.remove();
+eachFact(imgFact1);
+eachFact(imgFact2);
+eachFact(imgFact3);
+
+let active = 3;
+function loadShow() {
+  let stt = 0;
+  items[active].style.transform = `none`;
+  items[active].style.zIndex = 1;
+  items[active].style.filter = "none";
+  items[active].style.opacity = 1;
+  for (var i = active + 1; i < items.length; i++) {
+    stt++;
+    items[i].style.transform = `translateX(${120 * stt}px) scale(${
+      1 - 0.2 * stt
+    }) perspective(16px) rotateY(-1deg)`;
+    items[i].style.zIndex = -stt;
+    items[i].style.filter = "blur(5px)";
+    items[i].style.opacity = stt > 2 ? 0 : 0.6;
+  }
+  stt = 0;
+  for (var i = active - 1; i >= 0; i--) {
+    stt++;
+    items[i].style.transform = `translateX(${-120 * stt}px) scale(${
+      1 - 0.2 * stt
+    }) perspective(16px) rotateY(1deg)`;
+    items[i].style.zIndex = -stt;
+    items[i].style.filter = "blur(5px)";
+    items[i].style.opacity = stt > 2 ? 0 : 0.6;
   }
 }
-
-function rdmString(list) {
-  const randomIndex = Math.floor(Math.random() * list.length);
-  return list[randomIndex];
-}
-
-function clickDisplay() {
-  const display = imgFact.querySelector("p");
-  if (!display) {
-    addText(rdmString(listPandaFact));
-  } else {
-    rmText();
-  }
-}
-
-imgFact.addEventListener("click", clickDisplay);
+loadShow();
+next.onclick = function () {
+  active = active + 1 < items.length ? active + 1 : active;
+  loadShow();
+};
+prev.onclick = function () {
+  active = active - 1 >= 0 ? active - 1 : active;
+  loadShow();
+};
