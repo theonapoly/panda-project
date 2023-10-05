@@ -192,14 +192,6 @@ function parallax(elemChange) {
     const { scrollTop, clientHeight } = document.documentElement;
     const classShow = document.querySelector(".show");
 
-    console.log(
-      scrollTop >
-        (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1.2 &&
-        scrollTop <
-          (scrollTop + botElementToTopViewport).toFixed() - clientHeight * 0.8
-    );
-    console.log(scrollTop);
-
     if (
       scrollTop >
         (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8 &&
@@ -273,7 +265,7 @@ window.addEventListener(`scroll`, () => {
   const topElementToTopViewport = backgroundChange.getBoundingClientRect().top;
   const botElementToTopViewport =
     backgroundChange.getBoundingClientRect().bottom;
-  console.log(scrollTop);
+
   if (
     scrollTop >
       (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.2 &&
