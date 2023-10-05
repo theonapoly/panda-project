@@ -14,11 +14,20 @@
       <!-- NAVBAR -->
       <nav class="navbar">
         <div class="navbar-button">
-          <img
-            src="./assets/img/calligraphie/remplacer-prochainement.png"
-            alt="panda button"
-          />
+          <div class="ponda-mignon">
+            <img
+              src="./assets/img/calligraphie/ponda-mignon.png"
+              alt="panda button"
+            />
+          </div>
+          <div class="vector">
+            <img
+              src="./assets/img/calligraphie/Vector.png"
+              alt="panda button"
+            />
+          </div>
         </div>
+
         <div class="navbar-logo">
           <img
             src="./assets/img/calligraphie/panda-géant.png"
@@ -27,36 +36,54 @@
         </div>
 
         <ul class="navbar-list">
-          <li id="history">Histoire</li>
-          <li id="pics">Photos</li>
-          <li id="warn">Menaces</li>
-          <li id="act">S'engager</li>
+          <li><a href="#history">Histoire</a></li>
+          <li><a href="#pics">Photos</a></li>
+          <li><a href="#warn">Menaces</a></li>
+          <li><a href="#act">S'engager</a></li>
         </ul>
       </nav>
-      <div class="patte-illu">
-        <div>
+      <!-- -------------------------------navbarMobil---------------- -->
+      <div class="navbarMobil">
+        <!-- <div>
           <div class="patte-right front">
-            <img src="./assets/icon/patte-illu.png" alt="patte-illu" />
+            <img src="/assets/icon/patte-illu.png" alt="patte-illu" />
           </div>
-          <div class="patte-left front">
-            <img src="./assets/icon/patte-illu.png" alt="patte-illu" />
+        </div> -->
+        <div>
+          <div class="bambu"></div>
+          <div class="bamboo-leaf">
+            <a href="#history">Histoire</a>
           </div>
         </div>
         <div>
-          <div class="patte-right">
-            <img src="./assets/icon/patte-illu.png" alt="patte-illu" />
+          <div class="bambu"></div>
+          <div class="bamboo-leaf">
+            <a href="#pics">Photos</a>
           </div>
-          <div class="patte-left">
-            <img src="./assets/icon/patte-illu.png" alt="patte-illu" />
+        </div>
+        <div>
+          <div class="bambu"></div>
+          <div class="bamboo-leaf">
+            <a href="#warn">Menaces</a>
+          </div>
+        </div>
+        <div>
+          <div class="bambu"></div>
+          <div class="bamboo-leaf">
+            <a href="#act">S'engager</a>
           </div>
         </div>
       </div>
 
+      <div class="patte-illu">
+        <div class="patte-right"></div>
+        <div class="patte-left"></div>
+      </div>
+
       <!-- HERO -->
-      <div class="hero-img">
+      <div id="history">
         <div class="hero-title">
           <h1 class="hero-panda"></h1>
-          <img src="" alt="" />
         </div>
       </div>
     </header>
@@ -144,17 +171,6 @@
           </p>
           <span class="read-more-btn">+</span>
         </section>
-
-        <!-- <div class="main-container">
-          <div class="container">
-            <p class="sentence">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae aut eos aperiam, suscipit cupiditate porro accusantium
-              labore voluptatem at accusamus odit in nemo libero magni a nobis
-              omnis nesciunt ipsa!
-            </p>
-          </div>
-        </div> -->
 
         <!-- TEXTE STRONG 1 WHITE-->
         <div class="strong-text-white">
@@ -265,7 +281,7 @@
           </span>
           <span class="read-more-btn">+</span>
         </section>
-        <div class="nextanim"></div>
+
         <!-- ILLUSTRATION 3 BLACK "Le saviez-vous ?" -->
         <div class="anim-img" id="anim-3">
           <img src="./assets/img/img-panda/panda-draw-white.png" alt="panda" />
@@ -299,14 +315,12 @@
         <!-- TEXTE STRONG 2 BLACK-->
         <div class="strong-text-black">
           <p>
-          Les conséquences dramatiques : brassage génétique insuffisant,
-          consanguinité, résistance amoindrie aux maladies, faible adaptabilité
-          aux changements environnementaux, etc.
+            Les conséquences dramatiques : brassage génétique insuffisant,
+            consanguinité, résistance amoindrie aux maladies, faible
+            adaptabilité aux changements environnementaux, etc.
           </p>
         </div>
       </article>
-
-      
 
       <!-- TITRE DONATEURS -->
       <div class="title-asso">
@@ -320,18 +334,142 @@
         <h1>Donateurs</h1>
         <p>2567</p>
       </div> -->
+      <div class="slider">
+        <div class="item">
+          <div class="logo-done">
+            <div class="logo wwf"></div>
+            <div class="dons">DONS</div>
+          </div>
+          <p>
+            Le WWF France est la section française du Fonds mondial pour la
+            nature, créée en 1973. C'est une fondation reconnue d'utilité
+            publique. Elle est présidée depuis 2021 par Monique Barbut, et
+            dirigée par Véronique Andrieux, directrice exécutive depuis 2019.
+          </p>
+          <div class="social-networks">
+            <img
+              class="icon"
+              src="./assets/icon/twitter-icon.png"
+              alt="Twitter/X"
+            />
+            <img
+              class="icon"
+              src="./assets/icon/facebook-icon.png"
+              alt="Facebook"
+            />
+            <img
+              class="icon"
+              src="./assets/icon/instagram-icon.png"
+              alt="Instagram"
+            />
+            <img class="icon" src="./assets/icon/email-icon.png" alt="Email" />
+          </div>
+        </div>
+        <div class="item">
+          <div class="logo-done">
+            <div class="logo lbn"></div>
+            <div class="dons">DONS</div>
+          </div>
+          <p>
+            L'ASSOCIATION Beauval Nature, association à but non lucratif, œuvre
+            depuis 10 ans sur le terrain. Nous soutenons 56 programmes de
+            conservation pour la préservation de la biodiversité en danger.
+          </p>
+          <div class="social-networks">
+            <img
+              class="icon"
+              src="./assets/icon/twitter-icon.png"
+              alt="Twitter/X"
+            />
+            <img
+              class="icon"
+              src="./assets/icon/facebook-icon.png"
+              alt="Facebook"
+            />
+            <img
+              class="icon"
+              src="./assets/icon/instagram-icon.png"
+              alt="Instagram"
+            />
+            <img class="icon" src="./assets/icon/email-icon.png" alt="Email" />
+          </div>
+        </div>
+        <div class="item">
+          <div class="logo-done">
+            <div class="logo lop"></div>
+            <div class="dons">DONS</div>
+          </div>
+          <p>
+            Le 26 janvier 1912, la Ligue Française pour la Protection des
+            Oiseaux, future LPO, voit le jour en tant que sous-section de la
+            Société Nationale d'Acclimatation de France, dont le siège social se
+            situe à Paris.
+          </p>
+          <div class="social-networks">
+            <img
+              class="icon"
+              src="./assets/icon/twitter-icon.png"
+              alt="Twitter/X"
+            />
+            <img
+              class="icon"
+              src="./assets/icon/facebook-icon.png"
+              alt="Facebook"
+            />
+            <img
+              class="icon"
+              src="./assets/icon/instagram-icon.png"
+              alt="Instagram"
+            />
+            <img class="icon" src="./assets/icon/email-icon.png" alt="Email" />
+          </div>
+        </div>
+        <div class="item">
+          <div class="logo-done">
+            <div class="logo ifaw">
+              <img src="./assets/icon/Ifaw_logo 1.png" alt="ifaw" />
+            </div>
+            <div class="dons">DONS</div>
+          </div>
+          <p>
+            Brian Davies fonde IFAW dans le but de mettre fin à la chasse
+            commerciale aux bébés phoques (blanchons) sur la côte est du Canada.
+          </p>
+          <div class="social-networks">
+            <img
+              class="icon"
+              src="./assets/icon/twitter-icon.png"
+              alt="Twitter/X"
+            />
+            <img
+              class="icon"
+              src="./assets/icon/facebook-icon.png"
+              alt="Facebook"
+            />
+            <img
+              class="icon"
+              src="./assets/icon/instagram-icon.png"
+              alt="Instagram"
+            />
+            <img class="icon" src="./assets/icon/email-icon.png" alt="Email" />
+          </div>
+        </div>
 
-      <div class="circle-multiple">
+        <button id="next"><</button>
+        <button id="prev">></button>
+      </div>
+
+      <!-- <div class="circle-multiple">
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle">
           <p>Donateurs <br />2879</p>
         </div>
-      </div>
+      </div> -->
 
       <!-- CARDS ASSOCIATIONS PROTECTION ANIMAL -->
-      <div class="card-asso card-wwf">
+      <!-- <div class="card-asso card-wwf">
         <img src="" alt="" />
       </div>
       <div class="card-asso card-beauval">
@@ -342,7 +480,7 @@
       </div>
       <div class="card-asso card-ifaw">
         <img src="" alt="" />
-      </div>
+      </div> -->
     </main>
 
     <!-- FOOTER -->
