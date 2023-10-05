@@ -91,9 +91,9 @@ function eachFact(item) {
   item.addEventListener("click", clickDisplay);
 }
 
-eachFact(imgFact1);
-eachFact(imgFact2);
-eachFact(imgFact3);
+eachFact (imgFact1)
+eachFact (imgFact2)
+eachFact (imgFact3)
 
 // Carrousel -----------------------
 document.body.onload = function () {
@@ -107,7 +107,7 @@ document.body.onload = function () {
   for (let i = 1; i <= nbrPics; i++) {
     const divPics = document.createElement("div");
     divPics.className = "photo";
-    divPics.style.backgroundImage = `url('/assets/photos/photo-panda-${i}.jpg')`;
+    divPics.style.backgroundImage = `url('./assets/photos/photo-panda-${i}.jpg')`;
     container.appendChild(divPics);
   }
 
@@ -140,53 +140,76 @@ document.body.onload = function () {
 
 // const body = document.getElementsByTagName("body");
 
+
 // Effet Parallax -----------------------
-const sectionOne = document.querySelector(".section-1");
-const iconsInfos = document.querySelector(".icons-infos");
+const sectionOne = document.querySelector(`.section-1`);
+const sectionTwo = document.querySelector(`.section-2`);
+const sectionThree = document.querySelector(`.section-3`);
+const sectionFour = document.querySelector(`.section-4`);
+const sectionFive = document.querySelector(`.section-5`);
+const sectionSix = document.querySelector(`.section-6`);
 
-const sectionTwo = document.querySelector(".section-2");
-const strongWhite = document.querySelector(".strong-text-white");
 
-const sectionThree = document.querySelector(".section-3");
-const carrouselPart = document.querySelector(".carrousel");
+function parallax(elemChange) {
+  
+   window.addEventListener("scroll", () => {
 
-const sectionFour = document.querySelector(".section-4");
-const animeTwo = document.querySelector(".anim-2");
+    const topElementToTopViewport = elemChange.getBoundingClientRect().top;
+    const botElementToTopViewport = elemChange.getBoundingClientRect().bottom;
+    const {scrollTop, clientHeight} = document.documentElement;
+    const classShow = document.querySelector(".show");
 
-const sectionFive = document.querySelector(".section-5");
-const animeThree = document.querySelector(".nextanim");
+    console.log(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1.2 && scrollTop < (scrollTop + botElementToTopViewport).toFixed() - clientHeight * 0.8)
+    console.log(scrollTop);
 
-const sectionSix = document.querySelector(".section-6");
-const strongBlack = document.querySelector(".strong-text-black");
-
-let offTop, offBot;
-
-function parallax(elemChange, elemNext) {
-  let offTop = elemChange.offsetTop - 700;
-  let offBot = elemNext.offsetTop - 0.3 * window.innerHeight;
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY >= offTop && window.scrollY < offBot) {
+    if ( 
+      scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8 && 
+      scrollTop < (scrollTop + botElementToTopViewport).toFixed() - clientHeight * 0.3
+      )  {
       elemChange.classList.add("show");
-      const classShow = document.querySelector(".show");
-      classShow.style.opacity = "1";
-      classShow.style.transition = "2s";
+      elemChange.style.opacity = "1";
+      elemChange.style.transition = "2s";
     } else {
-      elemChange.classList.remove("show");
       elemChange.style.opacity = "0";
-    }
-    offTop = elemChange.offsetTop - 700;
-    offBot = elemNext.offsetTop - 0.3 * window.innerHeight;
-  });
-}
+    }})
 
-parallax(sectionOne, iconsInfos);
-parallax(sectionTwo, strongWhite);
-parallax(sectionThree, carrouselPart);
-parallax(sectionFour, animeTwo);
-parallax(sectionFive, animeThree);
-parallax(sectionSix, strongBlack);
+  };
+
+parallax(sectionOne);
+parallax(sectionTwo);
+parallax(sectionThree);
+parallax(sectionFour);
+parallax(sectionFive);
+parallax(sectionSix);
 
 // window.addEventListener("click", (event) => {
 //   console.log(event);
 // });
+
+// Fonction couleur BG
+
+const allDocument = document.querySelector(`body`)
+const backgroundChange = document.querySelector(`.article-black`)
+
+window.addEventListener(`scroll`, () => {
+
+  const {scrollTop, clientHeight} = document.documentElement;
+
+  const topElementToTopViewport = backgroundChange.getBoundingClientRect().top;
+  const botElementToTopViewport = backgroundChange.getBoundingClientRect().bottom;
+console.log(scrollTop)
+  if(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.2 && scrollTop < (scrollTop + botElementToTopViewport).toFixed() - clientHeight * 0.2){
+    allDocument.classList.add("background-transition");
+    const bgTransition = document.querySelector(".background-transition");
+    bgTransition.style.backgroundOpacity = "1";
+    bgTransition.style.backgroundColor = "#09090c";
+    bgTransition.style.transition = "1.5s";
+  } else {
+    allDocument.classList.add("background-transition");
+    const bgTransition = document.querySelector(".background-transition");
+    bgTransition.style.backgroundOpacity = "0";
+    bgTransition.style.backgroundColor = "white";
+    allDocument.classList.remove("background-transition");
+  }
+
+})
