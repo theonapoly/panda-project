@@ -182,6 +182,26 @@ a {
 
 /* --------------------------------------- ARTICLES --------------------------------------- */
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10vw;
+  margin: 10vh;
+}
+
+.container {
+  position: relative;
+}
+
+.sentence {
+  position: absolute;
+  bottom: -100vh;
+}
+
+.section {
+  opacity: 0;
+}
+
 /* Titres et paragraphes */
 .section {
   display: flex;
@@ -301,14 +321,49 @@ a {
 
 /* CARROUSEL PHOTOS */
 .carrousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100vw;
+  height: 60vh;
+  background-color: #09090c;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  display: inline-block;
 }
-.carrousel figure img {
-  width: 100%;
-  height: 40vh;
-  object-fit: cover;
+
+.container-carrousel {
+  width: 100vw;
+  height: 60vh;
+}
+.photo {
+  width: 100vw;
+  height: 60vh;
+  margin: 0;
+  display: inline-block;
+  background-size: cover;
+}
+
+.btn-carrousel {
+  position: absolute;
+  width: 60px;
+  cursor: pointer;
+  top: 50%;
+  background-color: rgba(256, 256, 256, 0.4);
+  border: 2px solid white;
+  border-radius: 100%;
+}
+
+#btn-left {
+  left: 0.8rem;
+}
+#btn-left:hover {
+  transform: scale(1.2);
+}
+
+#btn-right {
+  right: 0.8rem;
+}
+#btn-right:hover {
+  transform: scale(1.2);
 }
 
 /* ASSOCIATIONS - DONATIONS */
@@ -447,73 +502,6 @@ a {
   border-radius: 50%;
   padding: 3rem;
   background-color: rgba(0, 0, 0, 0.9);
-}
-/* ------------------------catd--------------  */
-
-.slider {
-  position: relative;
-  width: 100%;
-  height: 370px;
-  overflow: hidden;
-}
-.item {
-  border: 2px solid var(--primary-color);
-  position: absolute;
-  width: 60%;
-
-  height: 320px;
-
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  transition: 0.5s;
-  left: calc(50% - 110px);
-  top: 0;
-  left: 20%;
-}
-#next,
-#prev {
-  position: absolute;
-  top: 40%;
-  color: #0c0b0b;
-  background-color: transparent;
-  border: none;
-  font-size: 3rem;
-  z-index: 2;
-  font-weight: bold;
-  left: 10px;
-}
-#next {
-  left: unset;
-  right: 10px;
-}
-.social-networks {
-  display: flex;
-}
-.social-networks img {
-  width: 10%;
-  height: 10%;
-}
-.logo-done {
-  display: flex;
-  justify-content: space-between;
-}
-p {
-  height: 130px;
-  width: 84%;
-  margin: 10px auto;
-  display: flex;
-  align-items: center;
-}
-.dons {
-  padding: 5px;
-  border: 1px solid var(--font-primary);
-  width: 50%;
-  height: 30px;
-  margin-top: 10px;
-  border-radius: 10px;
-  color: var(--font-primary);
-  align-items: center;
 }
 
 /* --------------------------------------- FOOTER --------------------------------------- */
