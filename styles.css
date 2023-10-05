@@ -17,22 +17,149 @@
 /* Fonts */
 @font-face {
   font-family: "edosz";
-  src: url("/assets/fonts/edosz.ttf");
+  src: url("./assets/fonts/edosz.ttf");
   font-family: "caviar";
-  src: url("/assets/fonts/CaviarDreams.ttf");
+  src: url("./assets/fonts/CaviarDreams.ttf");
   font-family: "osake";
-  src: url("/assets/fonts/Osake.ttf");
+  src: url("./assets/fonts/Osake.ttf");
   font-family: "deriku";
-  src: url("/assets/fonts/Dekiru.ttf");
+  src: url("./assets/fonts/Dekiru.ttf");
   font-family: "bambou";
-  src: url("/assets/fonts/123Bambou.ttf");
+  src: url("./assets/fonts/123Bambou.ttf");
 }
 
 /* --------------------------------------- GENERAL --------------------------------------- */
 body {
   background-color: var(--secondary-color);
 }
+/* -----------------------header-------------------- */
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 64px;
+}
+.navbar-button {
+  width: 100%;
+  height: 100%;
+}
+.navbar-button img {
+  width: 100%;
+  height: 64px;
+}
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+.navbar-logo img {
+  width: 100%;
+  height: 64px;
+  margin: 0 10%;
+}
+.navbar-list {
+  width: 0;
+  list-style: none;
+  visibility: hidden;
+  z-index: -1;
+}
 
+.hero-img {
+  background-image: url(./assets/photos/hero-mobile.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-title h1 {
+  display: block;
+  font-size: 102px;
+  color: var(--font-secondary);
+}
+
+.patte-illu {
+  width: 5%;
+  position: absolute;
+  animation: pastaWorks 100s infinite linear;
+}
+.patte-illu img {
+  width: 50%;
+}
+.patte-left {
+  display: flex;
+  justify-content: left;
+}
+.patte-right {
+  display: flex;
+  justify-content: right;
+}
+@keyframes pastaWorks {
+  0% {
+    top: 440px;
+    left: 2%;
+    transform: rotate(90deg);
+  }
+
+  10% {
+    top: 480px;
+    left: 95%;
+    transform: rotate(90deg);
+  }
+  11% {
+    top: 480px;
+    left: 95%;
+    transform: rotate(180deg);
+  }
+
+  15% {
+    top: 750px;
+    left: 95%;
+    transform: rotate(180deg);
+  }
+  25% {
+    top: 850px;
+    left: 3%;
+    transform: rotate(270deg);
+  }
+  30% {
+    top: 1400px;
+    left: 3%;
+    transform: rotate(180deg);
+  }
+  40% {
+    top: 1400px;
+    left: 95%;
+    transform: rotate(90deg);
+  }
+  45% {
+    top: 1700px;
+    left: 95%;
+    transform: rotate(180deg);
+  }
+  100% {
+    top: 2000px;
+    left: 95%;
+    transform: rotate(180deg);
+  }
+}
+
+.hero-img {
+  background-image: url(./assets/photos/hero-mobile.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-title h1 {
+  font-size: 102px;
+  color: var(--font-secondary);
+}
 /* --------------------------------------- ARTICLES --------------------------------------- */
 
 .main-container {
@@ -305,6 +432,59 @@ body {
     transform: rotate(1080deg) scale(1) translate(0, 0);
   }
 }
+/* --------------------------------------- CLIC PANDA --------------------------------------- */
+#anim-1 {
+  position: relative;
+}
+
+#anim-1 img:hover {
+  transform: scale(1.1);
+}
+
+#anim-1 img:active {
+  transform: scale(1);
+}
+
+#anim-2 {
+  position: relative;
+}
+
+#anim-2 img:hover {
+  transform: scale(1.1);
+}
+
+#anim-2 img:active {
+  transform: scale(1);
+}
+
+#anim-3 {
+  position: relative;
+}
+
+#anim-3 img:hover {
+  transform: scale(1.1);
+}
+
+#anim-3 img:active {
+  transform: scale(1);
+}
+
+
+
+.fact {
+  color: #ffffff;
+  width: clamp(300px, 40vw , 600px);
+  height: auto;
+  top: -10vh;
+  text-align: center;
+  display: flex;
+  position:absolute;
+  font-family: bambou;
+  border: 3px solid black;
+  border-radius: 50%;
+  padding: 3rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  }
 
 /* --------------------------------------- FOOTER --------------------------------------- */
 footer {
@@ -342,9 +522,47 @@ footer {
   margin-top: clamp(3rem, 10vw, 100rem);
 }
 
-/* --------------------------------------- MEDIA QUERIES DESKTOP --------------------------------------- */
-@media screen and (min-width: 1056px) {
+/* --------------------------------------- MEDIA QUERIES --------------------------------------- */
+@media screen and (min-width: 800px) {
   .title-footer {
     font-size: 2.5rem;
+  }
+
+  .navbar {
+    display: flex;
+  }
+  .navbar-button {
+    width: 0%;
+    height: 0%;
+    z-index: -1;
+    visibility: hidden;
+  }
+
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-list {
+    visibility: visible;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .navbar-list li:hover {
+    transform: scale(1.1);
+  }
+
+  .hero-img {
+    background-image: url(./assets/photos/hero-desktop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
