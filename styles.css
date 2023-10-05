@@ -29,11 +29,31 @@
 }
 
 /* --------------------------------------- GENERAL --------------------------------------- */
-html {
+body {
   background-color: var(--secondary-color);
 }
 
 /* --------------------------------------- ARTICLES --------------------------------------- */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10vw;
+  margin: 10vh;
+}
+
+.container {
+  position: relative;
+}
+
+.sentence {
+  position: absolute;
+  bottom: -100vh;
+}
+
+.section {
+  opacity: 0;
+}
 
 /* Titres et paragraphes */
 .section {
@@ -154,8 +174,8 @@ html {
 
 /* CARROUSEL PHOTOS */
 .carrousel {
-  width: 400px;
-  height: 400px;
+  width: 100vw;
+  height: 60vh;
   background-color: #09090c;
   position: relative;
   margin: 0 auto;
@@ -164,12 +184,12 @@ html {
 }
 
 .container-carrousel {
-  width: 400px;
-  height: 400px;
+  width: 100vw;
+  height: 60vh;
 }
 .photo {
-  width: 400px;
-  height: 400px;
+  width: 100vw;
+  height: 60vh;
   margin: 0;
   display: inline-block;
   background-size: cover;
