@@ -1,5 +1,61 @@
-// Bouton "voir plus" -----------------------
+// Bouton "voir plus"
 const containers = document.querySelectorAll(".section");
+const patteRight = document.querySelector(".patte-right");
+const patteLeft = document.querySelector(".patte-left");
+const heroPanda = document.querySelector(".hero-panda");
+const navbarMobil = document.querySelector(".navbar-button");
+const navbarVisible = document.querySelector(".navbarMobil");
+const hoosePosition = document.querySelector(".bamboo-leaf");
+const imgFact1 = document.getElementById("anim-1");
+const imgFact2 = document.getElementById("anim-2");
+const imgFact3 = document.getElementById("anim-3");
+let items = document.querySelectorAll(".slider .item");
+let next = document.getElementById("next");
+let prev = document.getElementById("prev");
+
+const nome = ["PANDA"];
+let pandaIndex = 0;
+
+// --------------nav bare--------------------------
+navbarMobil.addEventListener("click", () => {
+  navbarVisible.style.display = "initial";
+});
+hoosePosition.addEventListener("click", () => {
+  navbarVisible.style.display = "none";
+});
+
+//------------------hero-------------------
+const createLettre = () => {
+  const letter = document.createElement("spam");
+  heroPanda.appendChild(letter);
+  letter.textContent = nome[0][pandaIndex];
+};
+
+setInterval(() => {
+  if (pandaIndex < 5) {
+    createLettre();
+    pandaIndex++;
+  }
+}, 300);
+
+//---------------------------pattAnimation---------------------------
+
+const pattAnimation = (patt) => {
+  const pattImg = document.createElement("img");
+  patt.appendChild(pattImg);
+  pattImg.src = "./assets/icon/patte-illu.png";
+  setTimeout(() => {
+    pattImg.remove();
+  }, 900);
+};
+setInterval(() => {
+  pattAnimation(patteRight);
+}, 2000);
+setTimeout(() => {
+  setInterval(() => {
+    pattAnimation(patteLeft);
+  }, 2000);
+}, 1000);
 
 containers.forEach((parentContainer) => {
   parentContainer.addEventListener("click", (event) => {
@@ -17,22 +73,6 @@ containers.forEach((parentContainer) => {
     current.textContent = current.textContent.includes("+") ? "-" : "+";
   });
 });
-
-const heroPanda = document.querySelector(".hero-panda");
-let nome = ["PANDA"];
-let pandaIndex = 0;
-const createLettre = () => {
-  const letter = document.createElement("spam");
-  heroPanda.appendChild(letter);
-  letter.textContent = nome[0][pandaIndex];
-};
-
-setInterval(() => {
-  if (pandaIndex < 5) {
-    createLettre();
-    pandaIndex++;
-  }
-}, 300);
 
 // Fonction panda cliquable
 const listPandaFact = [
@@ -55,9 +95,6 @@ const listPandaFact = [
   "Les pandas ont un camouflage efficace malgré leur couleur particulière en noir et blanc.",
   "Il existe deux sous-espèces distinctes de panda géant : le panda géant de Sichuan et le panda géant de Qinling.",
 ];
-const imgFact1 = document.getElementById("anim-1");
-const imgFact2 = document.getElementById("anim-2");
-const imgFact3 = document.getElementById("anim-3");
 
 function eachFact(item) {
   function addText(array) {
@@ -107,7 +144,7 @@ document.body.onload = function () {
   for (let i = 1; i <= nbrPics; i++) {
     const divPics = document.createElement("div");
     divPics.className = "photo";
-    divPics.style.backgroundImage = `url('/assets/photos/photo-panda-${i}.jpg')`;
+    divPics.style.backgroundImage = `url('./assets/photos/photo-panda-${i}.jpg')`;
     container.appendChild(divPics);
   }
 
@@ -141,52 +178,110 @@ document.body.onload = function () {
 // const body = document.getElementsByTagName("body");
 
 // Effet Parallax -----------------------
-const sectionOne = document.querySelector(".section-1");
-const iconsInfos = document.querySelector(".icons-infos");
+const sectionOne = document.querySelector(`.section-1`);
+const sectionTwo = document.querySelector(`.section-2`);
+const sectionThree = document.querySelector(`.section-3`);
+const sectionFour = document.querySelector(`.section-4`);
+const sectionFive = document.querySelector(`.section-5`);
+const sectionSix = document.querySelector(`.section-6`);
 
-const sectionTwo = document.querySelector(".section-2");
-const strongWhite = document.querySelector(".strong-text-white");
+function parallax(elemChange) {
+  window.addEventListener("scroll", () => {
+    const topElementToTopViewport = elemChange.getBoundingClientRect().top;
+    const botElementToTopViewport = elemChange.getBoundingClientRect().bottom;
+    const { scrollTop, clientHeight } = document.documentElement;
+    const classShow = document.querySelector(".show");
 
-const sectionThree = document.querySelector(".section-3");
-const carrouselPart = document.querySelector(".carrousel");
-
-const sectionFour = document.querySelector(".section-4");
-const animeTwo = document.querySelector(".anim-2");
-
-const sectionFive = document.querySelector(".section-5");
-const animeThree = document.querySelector(".nextanim");
-
-const sectionSix = document.querySelector(".section-6");
-const strongBlack = document.querySelector(".strong-text-black");
-
-let offTop, offBot;
-
-function parallax(elemChange, elemNext) {
-  let offTop = elemChange.offsetTop - 700;
-  let offBot = elemNext.offsetTop - 0.3 * window.innerHeight;
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY >= offTop && window.scrollY < offBot) {
+    if (
+      scrollTop >
+        (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8 &&
+      scrollTop <
+        (scrollTop + botElementToTopViewport).toFixed() - clientHeight * 0.3
+    ) {
       elemChange.classList.add("show");
-      const classShow = document.querySelector(".show");
-      classShow.style.opacity = "1";
-      classShow.style.transition = "2s";
+      elemChange.style.opacity = "1";
+      elemChange.style.transition = "2s";
     } else {
-      elemChange.classList.remove("show");
       elemChange.style.opacity = "0";
     }
-    offTop = elemChange.offsetTop - 700;
-    offBot = elemNext.offsetTop - 0.3 * window.innerHeight;
   });
 }
 
-parallax(sectionOne, iconsInfos);
-parallax(sectionTwo, strongWhite);
-parallax(sectionThree, carrouselPart);
-parallax(sectionFour, animeTwo);
-parallax(sectionFive, animeThree);
-parallax(sectionSix, strongBlack);
+parallax(sectionOne);
+parallax(sectionTwo);
+parallax(sectionThree);
+parallax(sectionFour);
+parallax(sectionFive);
+parallax(sectionSix);
 
 // window.addEventListener("click", (event) => {
 //   console.log(event);
 // });
+let active = 3;
+function loadShow() {
+  let stt = 0;
+  items[active].style.transform = `none`;
+  items[active].style.zIndex = 1;
+  items[active].style.filter = "none";
+  items[active].style.opacity = 1;
+  for (var i = active + 1; i < items.length; i++) {
+    stt++;
+    items[i].style.transform = `translateX(${120 * stt}px) scale(${
+      1 - 0.2 * stt
+    }) perspective(16px) rotateY(-1deg)`;
+    items[i].style.zIndex = -stt;
+    items[i].style.filter = "blur(5px)";
+    items[i].style.opacity = stt > 2 ? 0 : 0.6;
+  }
+  stt = 0;
+  for (var i = active - 1; i >= 0; i--) {
+    stt++;
+    items[i].style.transform = `translateX(${-120 * stt}px) scale(${
+      1 - 0.2 * stt
+    }) perspective(16px) rotateY(1deg)`;
+    items[i].style.zIndex = -stt;
+    items[i].style.filter = "blur(5px)";
+    items[i].style.opacity = stt > 2 ? 0 : 0.6;
+  }
+}
+loadShow();
+next.onclick = function () {
+  active = active + 1 < items.length ? active + 1 : active;
+  loadShow();
+};
+prev.onclick = function () {
+  active = active - 1 >= 0 ? active - 1 : active;
+  loadShow();
+};
+
+// Fonction couleur BG
+
+const allDocument = document.querySelector(`body`);
+const backgroundChange = document.querySelector(`.article-black`);
+
+window.addEventListener(`scroll`, () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = backgroundChange.getBoundingClientRect().top;
+  const botElementToTopViewport =
+    backgroundChange.getBoundingClientRect().bottom;
+
+  if (
+    scrollTop >
+      (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.2 &&
+    scrollTop <
+      (scrollTop + botElementToTopViewport).toFixed() - clientHeight * 0.2
+  ) {
+    allDocument.classList.add("background-transition");
+    const bgTransition = document.querySelector(".background-transition");
+    bgTransition.style.backgroundOpacity = "1";
+    bgTransition.style.backgroundColor = "#09090c";
+    bgTransition.style.transition = "1.5s";
+  } else {
+    allDocument.classList.add("background-transition");
+    const bgTransition = document.querySelector(".background-transition");
+    bgTransition.style.backgroundOpacity = "0";
+    bgTransition.style.backgroundColor = "white";
+    allDocument.classList.remove("background-transition");
+  }
+});
