@@ -52,13 +52,16 @@ body {
   grid-template-columns: 1fr 2fr 1fr;
   height: 64px;
 }
-.paw-counter h6 {
-  font-size: 3rem;
-  margin: 0 20px;
+.pattattrape {
+  display: flex;
+  margin: 0 15px;
 }
-.paw-counter h5 {
-  font-size: 2rem;
-  line-height: 1.5rem;
+.pattattrape h6 {
+  font-size: 3rem;
+}
+
+.pattattrape img {
+  height: 50px;
 }
 .paw-counter {
   display: flex;
