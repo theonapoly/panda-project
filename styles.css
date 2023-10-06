@@ -11,8 +11,8 @@
 /* Colors */
 :root {
   --primary-color: #09090c;
-  --secondary-color: #fafdff;
-  --font-primary: #0e0f14;
+  --secondary-color: #f6f2f2;
+  --font-primary: #2f2f2f;
   --font-secondary: #ffffff;
 }
 
@@ -49,14 +49,15 @@ body {
 }
 
 #navburger {
-  width: clamp(2rem, 5vw + 1rem ,4rem);
-  height: clamp(2rem, 5vw + 1rem ,4rem);
+  width: clamp(2rem, 5vw + 1rem, 4rem);
+  height: clamp(2rem, 5vw + 1rem, 4rem);
 }
 
 .navbar {
   z-index: 10;
   top: 0;
   background-color: var(--secondary-color);
+  box-shadow: 10px 2vh 60px rgb(221, 220, 220);
   position: fixed;
   width: 100%;
   display: grid;
@@ -179,6 +180,10 @@ a {
   line-height: 2rem;
   text-align: justify;
   align-items: center;
+}
+
+.section-white {
+  color: var(--font-primary);
 }
 
 .section p {
