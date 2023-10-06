@@ -4,7 +4,8 @@
   "description": "![image-panda](./assets/photos/img-panda-1.jpg)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate":   "html-validator index.html '--ignore=Trailing slash on void elements'"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +13,8 @@
   "devDependencies": {
     "eslint": "^8.50.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.28.1"
+    "eslint-plugin-import": "^2.28.1",
+    "w3c-html-validator": "^1.5.1"
   },
   "dependencies": {
     "acorn": "^8.10.0",
