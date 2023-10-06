@@ -40,8 +40,19 @@
 /* --------------------------------------- GENERAL --------------------------------------- */
 body {
   background-color: var(--secondary-color);
+  overflow-x: hidden;
 }
 /* -----------------------header-------------------- */
+.navbar-button {
+  display: grid;
+  place-items: center;
+}
+
+#navburger {
+  width: clamp(2rem, 5vw + 1rem ,4rem);
+  height: clamp(2rem, 5vw + 1rem ,4rem);
+}
+
 .navbar {
   z-index: 10;
   top: 0;
