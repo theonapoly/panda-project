@@ -21,7 +21,7 @@ const dons = document.querySelectorAll(".dons");
 
 const nome = ["PANDA"];
 let pandaIndex = 0;
-// --------------nav bare--------------------------
+// --------------nav bar--------------------------
 navbarMobil.addEventListener("click", () => {
   navbarVisible.style.display = "initial";
   navbarClose();
@@ -59,7 +59,7 @@ const pattAnimation = () => {
   pattImg.style.height = size;
   pattImg.style.width = size;
   pattImg.style.top = Math.random() * 600 + "vh";
-  pattImg.style.left = Math.random() * 100 + "%";
+  pattImg.style.left = Math.random() * 100 + "%" - 100 + "px";
 
   pattImg.addEventListener("click", () => {
     counter++;
