@@ -149,7 +149,7 @@ eachFact(imgFact3);
 
 // Carrousel -----------------------
 document.body.onload = function () {
-  const nbrPics = 7;
+  const nbrPics = 8;
   let position = 0;
   const container = document.querySelector(".container-carrousel");
   const btnLeft = document.getElementById("btn-left");
@@ -159,7 +159,7 @@ document.body.onload = function () {
   for (let i = 1; i <= nbrPics; i++) {
     const divPics = document.createElement("div");
     divPics.className = "photo";
-    divPics.style.backgroundImage = `url('./assets/photos/photo-panda-${i}.jpg')`;
+    divPics.style.backgroundImage = `url('./assets/photos/carrousel-pic-${i}.png')`;
     container.appendChild(divPics);
   }
 
