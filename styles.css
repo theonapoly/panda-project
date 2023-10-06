@@ -64,13 +64,16 @@ body {
   grid-template-columns: 1fr 2fr 1fr;
   height: 64px;
 }
-.paw-counter h6 {
-  font-size: 3rem;
-  margin: 0 20px;
+.pattattrape {
+  display: flex;
+  margin: 0 15px;
 }
-.paw-counter h5 {
-  font-size: 2rem;
-  line-height: 1.5rem;
+.pattattrape h6 {
+  font-size: 3rem;
+}
+
+.pattattrape img {
+  height: 50px;
 }
 .paw-counter {
   display: flex;
@@ -556,6 +559,17 @@ a {
   color: white;
 }
 
+/* ASSOCIATIONS */
+.logo-done img {
+  width: 10vw;
+  height: 10vw;
+}
+
+.logo-wwf {
+  background: var(--primary-color);
+  border-radius: 100%;
+}
+
 /* --------------------------------------- FOOTER --------------------------------------- */
 footer {
   display: flex;
@@ -691,7 +705,9 @@ footer {
     align-items: center;
     margin: 15px;
     padding: 10px;
+    cursor: pointer;
   }
+
   .item p {
     height: 130px;
   }
@@ -701,6 +717,18 @@ footer {
   .social-networks img {
     width: 40px;
     height: 40px;
+  }
+  .logo-done img {
+    width: 10vw;
+    height: 10vw;
+  }
+  .logo-wwf {
+    background: var(--primary-color);
+    border-radius: 100%;
+  }
+  .logo-ifaw {
+    border: 1px solid var(--primary-color);
+    border-radius: 100%;
   }
   /* --------- Articles --------- */
 
