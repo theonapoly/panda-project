@@ -110,6 +110,8 @@ a {
   width: 100%;
   height: 60px;
   margin: 0 10%;
+  object-fit: contain;
+  height: 100%;
 }
 .navbar-list {
   display: none;
@@ -130,7 +132,7 @@ a {
 #history h1 spam {
   font-family: "Osake", sans-serif;
   color: var(--font-secondary);
-  font-size: clamp(3rem, 15vw, 25rem);
+  font-size: clamp(3rem, 18vw, 25rem);
 }
 .pattImg {
   position: absolute;
@@ -375,6 +377,7 @@ a {
   width: 200px;
   position: relative;
   margin: auto;
+  margin-bottom: 20vh;
   z-index: -1;
 }
 
@@ -421,6 +424,7 @@ a {
   height: 470px;
   overflow: hidden;
   margin: 80px 0;
+  font-family: caviar, sans-serif;
 }
 .item {
   border: 1px solid var(--primary-color);
@@ -466,6 +470,7 @@ a {
   align-items: center;
   margin: 15px;
   padding: 10px;
+  cursor: pointer;
 }
 .item p {
   height: 130px;
@@ -584,6 +589,7 @@ footer {
 
   .navbar {
     display: flex;
+    height: 70px;
   }
   .navbar-button {
     display: none;
@@ -598,22 +604,25 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-family: edosz, sans-serif;
+    margin: 0 10%;
   }
 
   .navbar-list li:hover {
     transform: scale(1.1);
   }
 
-  .hero-img {
+  #history {
     background-image: url(./assets/photos/hero-desktop.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-position: center; */
+    object-fit: contain;
+    object-position: center;
+    /* background-size: cover; */
     width: 100%;
-    height: 350px;
-    display: flex;
+    height: 95vh;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
   }
 
   .slider {
