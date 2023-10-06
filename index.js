@@ -5,7 +5,7 @@ const containers = document.querySelectorAll(".section");
 // const patteIllu = document.querySelector(".patte-illu");
 const counterNav = document.querySelector("h6");
 let counter = 0;
-const heroPanda = document.querySelector(".hero-panda");
+
 const navbarMobil = document.querySelector(".navbar-button");
 const navbarVisible = document.querySelector(".navbarMobil");
 
@@ -18,7 +18,8 @@ let items = document.querySelectorAll(".slider .item");
 let next = document.getElementById("next");
 let prev = document.getElementById("prev");
 const dons = document.querySelectorAll(".dons");
-
+// const pandaH = document.querySelector(".hero-title");
+const heroPanda = document.querySelector(".hero-panda");
 const nome = ["PANDA"];
 let pandaIndex = 0;
 // --------------nav bar--------------------------
@@ -36,6 +37,14 @@ const navbarClose = () => {
 navbarClose();
 
 //------------------hero-------------------
+// const crietobject = () => {
+//   const object = document.createElement("h1");
+//   object.classList.add("hero-panda");
+//   pandaH.appendChild(object);
+//   pandaH.textContent;
+// };
+// crietobject();
+
 const createLettre = () => {
   const letter = document.createElement("spam");
   heroPanda.appendChild(letter);
