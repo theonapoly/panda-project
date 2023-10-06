@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "../Visual Studio Code.app"
+	},
+	{
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "panda-project"
+  }
+}

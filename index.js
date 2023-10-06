@@ -1,28 +1,39 @@
 // Bouton "voir plus"
 const containers = document.querySelectorAll(".section");
-const patteRight = document.querySelector(".patte-right");
-const patteLeft = document.querySelector(".patte-left");
+// const patteRight = document.querySelector(".patte-right");
+// const patteLeft = document.querySelector(".patte-left");
+// const patteIllu = document.querySelector(".patte-illu");
+const counterNav = document.querySelector("h6");
+let counter = 0;
 const heroPanda = document.querySelector(".hero-panda");
 const navbarMobil = document.querySelector(".navbar-button");
 const navbarVisible = document.querySelector(".navbarMobil");
-const hoosePosition = document.querySelector(".bamboo-leaf");
+
+const position = document.querySelectorAll(".leaf");
+
 const imgFact1 = document.getElementById("anim-1");
 const imgFact2 = document.getElementById("anim-2");
 const imgFact3 = document.getElementById("anim-3");
 let items = document.querySelectorAll(".slider .item");
 let next = document.getElementById("next");
 let prev = document.getElementById("prev");
+const dons = document.querySelectorAll(".dons");
 
 const nome = ["PANDA"];
 let pandaIndex = 0;
-
 // --------------nav bare--------------------------
 navbarMobil.addEventListener("click", () => {
   navbarVisible.style.display = "initial";
+  navbarClose();
 });
-hoosePosition.addEventListener("click", () => {
-  navbarVisible.style.display = "none";
-});
+const navbarClose = () => {
+  for (let i = 0; i < position.length; i++) {
+    position[i].addEventListener("click", () => {
+      navbarVisible.style.display = "none";
+    });
+  }
+};
+navbarClose();
 
 //------------------hero-------------------
 const createLettre = () => {
@@ -39,23 +50,27 @@ setInterval(() => {
 }, 300);
 
 //---------------------------pattAnimation---------------------------
-
-const pattAnimation = (patt) => {
+const pattAnimation = () => {
   const pattImg = document.createElement("img");
-  patt.appendChild(pattImg);
+  pattImg.classList.add("pattImg");
+  document.body.appendChild(pattImg);
   pattImg.src = "./assets/icon/patte-illu.png";
+  const size = Math.random() * 100 + "px";
+  pattImg.style.height = size;
+  pattImg.style.width = size;
+  pattImg.style.top = Math.random() * 600 + "vh";
+  pattImg.style.left = Math.random() * 100 + "%";
+
+  pattImg.addEventListener("click", () => {
+    counter++;
+    counterNav.textContent = counter;
+    pattImg.remove();
+  });
   setTimeout(() => {
     pattImg.remove();
-  }, 900);
-};
-setInterval(() => {
-  pattAnimation(patteRight);
-}, 2000);
-setTimeout(() => {
-  setInterval(() => {
-    pattAnimation(patteLeft);
   }, 2000);
-}, 1000);
+};
+setInterval(pattAnimation, 500);
 
 containers.forEach((parentContainer) => {
   parentContainer.addEventListener("click", (event) => {
@@ -217,6 +232,18 @@ parallax(sectionSix);
 // window.addEventListener("click", (event) => {
 //   console.log(event);
 // });
+let a = 2879;
+document.querySelector(".donateur").innerHTML = a;
+const addnamber = () => {
+  for (let i = 0; i < dons.length; i++) {
+    dons[i].addEventListener("click", () => {
+      a++;
+      document.querySelector(".donateur").innerHTML = a;
+    });
+  }
+};
+addnamber();
+
 let active = 3;
 function loadShow() {
   let stt = 0;
